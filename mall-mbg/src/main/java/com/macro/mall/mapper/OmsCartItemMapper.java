@@ -26,5 +26,13 @@ public interface OmsCartItemMapper {
 
     int updateByPrimaryKeySelective(OmsCartItem record);
 
+    /**
+     * 获取指定会员的购物车列表
+     *
+     * @param memberId 会员id
+     * @return 购物车列表
+     */
+    List<OmsCartItem> getCartListByMemberId(Long memberId);
+
     int updateByPrimaryKey(OmsCartItem record);
 }
